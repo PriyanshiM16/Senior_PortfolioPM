@@ -1,0 +1,416 @@
+/* ============================================================
+   Priyanshi Malik | Portfolio Stylesheet
+   Theme: soft pink base + neon pink accents, card-based layout
+   ============================================================ */
+
+/* ---------- 1. DESIGN TOKENS ---------- */
+:root {
+  --pink-50:  #fff7fa;
+  --pink-100: #ffeaf2;
+  --pink-200: #ffd6e6;
+  --pink-300: #ffb8d4;
+  --pink-400: #ff8fbd;
+  --pink-500: #ff5fa2;   /* neon accent */
+  --pink-600: #e63e85;
+  --pink-700: #b32a63;
+
+  --ink:      #2c1f28;   /* main text */
+  --ink-soft: #6b5563;   /* secondary text */
+  --white:    #ffffff;
+
+  --glow:     0 0 12px rgba(255, 95, 162, 0.45);
+  --glow-lg:  0 0 26px rgba(255, 95, 162, 0.35);
+  --shadow:   0 10px 30px rgba(180, 90, 130, 0.12);
+  --shadow-h: 0 16px 40px rgba(180, 90, 130, 0.20);
+
+  --radius: 18px;
+  --radius-sm: 12px;
+  --ease: cubic-bezier(0.22, 1, 0.36, 1);
+}
+
+/* ---------- 2. BASE ---------- */
+* { box-sizing: border-box; margin: 0; padding: 0; }
+
+html { scroll-behavior: smooth; }
+
+body {
+  font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
+  font-weight: 400;
+  line-height: 1.7;
+  color: var(--ink);
+  background:
+    radial-gradient(900px 500px at 12% -8%, var(--pink-100), transparent 60%),
+    radial-gradient(800px 500px at 100% 0%, #fdf1ff, transparent 55%),
+    var(--pink-50);
+  background-attachment: fixed;
+  min-height: 100vh;
+  padding-bottom: 3rem;
+}
+
+img { max-width: 100%; display: block; }
+
+a { color: var(--pink-600); text-decoration: none; }
+
+/* ---------- 3. NAVBAR ---------- */
+header {
+  position: sticky;
+  top: 0;
+  z-index: 100;
+  background: rgba(255, 255, 255, 0.78);
+  backdrop-filter: blur(14px);
+  -webkit-backdrop-filter: blur(14px);
+  border-bottom: 1px solid var(--pink-200);
+  box-shadow: 0 4px 24px rgba(180, 90, 130, 0.08);
+}
+
+.navbar {
+  max-width: 1180px;
+  margin: 0 auto;
+  padding: 0.85rem 1.75rem;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  gap: 1.5rem;
+}
+
+.navbar-left img {
+  height: 46px;
+  width: auto;
+  transition: transform 0.4s var(--ease), filter 0.4s var(--ease);
+}
+
+.navbar-left img:hover {
+  transform: rotate(-8deg) scale(1.08);
+  filter: drop-shadow(0 0 10px rgba(255, 95, 162, 0.6));
+}
+
+.navbar-right {
+  display: flex;
+  align-items: center;
+  gap: 0.35rem;
+  list-style: none;
+  flex-wrap: wrap;
+}
+
+.navbar-right a {
+  position: relative;
+  display: inline-block;
+  padding: 0.55rem 0.95rem;
+  font-size: 0.9rem;
+  font-weight: 500;
+  letter-spacing: 0.02em;
+  color: var(--ink-soft);
+  border-radius: 999px;
+  transition: color 0.3s var(--ease), background 0.3s var(--ease);
+}
+
+/* animated neon underline */
+.navbar-right a::after {
+  content: "";
+  position: absolute;
+  left: 50%;
+  bottom: 4px;
+  width: 0;
+  height: 2px;
+  border-radius: 2px;
+  background: linear-gradient(90deg, var(--pink-400), var(--pink-500));
+  box-shadow: var(--glow);
+  transform: translateX(-50%);
+  transition: width 0.35s var(--ease);
+}
+
+.navbar-right a:hover,
+.navbar-right a:focus-visible {
+  color: var(--pink-600);
+  background: var(--pink-100);
+  outline: none;
+}
+
+.navbar-right a:hover::after,
+.navbar-right a:focus-visible::after {
+  width: calc(100% - 1.9rem);
+}
+
+/* ---------- 4. LAYOUT ---------- */
+.home-card {
+  max-width: 1080px;
+  margin: 0 auto;
+  padding: 2.5rem 1.75rem 0;
+  display: flex;
+  flex-direction: column;
+  gap: 1.75rem;
+}
+
+/* ---------- 5. CARD BOXES ---------- */
+.resource-card {
+  position: relative;
+  background: var(--white);
+  border: 1px solid var(--pink-200);
+  border-radius: var(--radius);
+  padding: 2rem 2.25rem;
+  box-shadow: var(--shadow);
+  overflow: hidden;
+  transition: transform 0.4s var(--ease), box-shadow 0.4s var(--ease),
+              border-color 0.4s var(--ease);
+}
+
+/* neon top edge that lights up on hover */
+.resource-card::before {
+  content: "";
+  position: absolute;
+  inset: 0 0 auto 0;
+  height: 3px;
+  background: linear-gradient(90deg,
+    transparent, var(--pink-400), var(--pink-500), var(--pink-400), transparent);
+  opacity: 0;
+  transition: opacity 0.4s var(--ease);
+}
+
+.resource-card:hover {
+  transform: translateY(-4px);
+  border-color: var(--pink-300);
+  box-shadow: var(--shadow-h);
+}
+
+.resource-card:hover::before { opacity: 1; }
+
+/* ---------- 6. HEADINGS ---------- */
+.resource-card h1 {
+  font-size: clamp(1.9rem, 4vw, 2.6rem);
+  font-weight: 700;
+  letter-spacing: -0.02em;
+  line-height: 1.15;
+  color: var(--ink);
+  margin-bottom: 0.25rem;
+}
+
+.resource-card h2 {
+  position: relative;
+  font-size: 1.35rem;
+  font-weight: 700;
+  letter-spacing: -0.01em;
+  color: var(--ink);
+  margin-bottom: 1.25rem;
+  padding-bottom: 0.7rem;
+}
+
+.resource-card h2::after {
+  content: "";
+  position: absolute;
+  left: 0;
+  bottom: 0;
+  width: 56px;
+  height: 3px;
+  border-radius: 3px;
+  background: linear-gradient(90deg, var(--pink-400), var(--pink-500));
+  box-shadow: var(--glow);
+}
+
+.resource-card h3 {
+  font-size: 0.8rem;
+  font-weight: 700;
+  text-transform: uppercase;
+  letter-spacing: 0.16em;
+  color: var(--pink-600);
+  margin-bottom: 0.85rem;
+}
+
+.resource-card h4 {
+  font-size: 1.02rem;
+  font-weight: 700;
+  color: var(--ink);
+  margin: 1.5rem 0 0.2rem;
+}
+
+.resource-card h4:first-of-type { margin-top: 0; }
+
+.resource-card h5 {
+  font-size: 0.82rem;
+  font-weight: 500;
+  color: var(--pink-600);
+  letter-spacing: 0.02em;
+  margin-bottom: 0.6rem;
+}
+
+/* ---------- 7. BIO ---------- */
+.bio {
+  display: flex;
+  align-items: center;
+  gap: 2.25rem;
+}
+
+.bio-pic {
+  flex: 0 0 190px;
+  position: relative;
+}
+
+.bio-pic::after {
+  content: "";
+  position: absolute;
+  inset: -6px;
+  border-radius: 50%;
+  background: linear-gradient(135deg, var(--pink-300), var(--pink-500));
+  filter: blur(14px);
+  opacity: 0.5;
+  z-index: -1;
+  transition: opacity 0.4s var(--ease);
+}
+
+.bio-pic:hover::after { opacity: 0.85; }
+
+.bio-pic img {
+  width: 190px;
+  height: 190px;
+  object-fit: cover;
+  border-radius: 50%;
+  border: 4px solid var(--white);
+  box-shadow: 0 8px 26px rgba(180, 90, 130, 0.22);
+}
+
+.bio-text { flex: 1; }
+
+.bio-text p {
+  color: var(--ink-soft);
+  font-size: 0.98rem;
+}
+
+/* ---------- 8. LISTS ---------- */
+.resource-card ul {
+  list-style: none;
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(230px, 1fr));
+  gap: 0.5rem 1.25rem;
+  margin-top: 0.5rem;
+}
+
+.resource-card li {
+  position: relative;
+  padding-left: 1.35rem;
+  font-size: 0.94rem;
+  color: var(--ink-soft);
+  transition: color 0.25s var(--ease), transform 0.25s var(--ease);
+}
+
+.resource-card li::before {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 0.68em;
+  width: 7px;
+  height: 7px;
+  border-radius: 50%;
+  background: var(--pink-400);
+  box-shadow: 0 0 8px rgba(255, 95, 162, 0.7);
+  transition: background 0.25s var(--ease), box-shadow 0.25s var(--ease);
+}
+
+.resource-card li:hover {
+  color: var(--ink);
+  transform: translateX(3px);
+}
+
+.resource-card li:hover::before {
+  background: var(--pink-500);
+  box-shadow: 0 0 14px rgba(255, 95, 162, 0.95);
+}
+
+/* ---------- 9. LINK IMAGES (email / LinkedIn) ---------- */
+.skill-images {
+  display: flex;
+  gap: 1.25rem;
+  flex-wrap: wrap;
+  margin-top: 0.5rem;
+}
+
+.picture {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 0.9rem;
+  border-radius: var(--radius-sm);
+  background: var(--pink-50);
+  border: 1px solid var(--pink-200);
+  transition: transform 0.35s var(--ease), box-shadow 0.35s var(--ease),
+              border-color 0.35s var(--ease), background 0.35s var(--ease);
+}
+
+.picture:hover {
+  transform: translateY(-4px) scale(1.04);
+  background: var(--white);
+  border-color: var(--pink-400);
+  box-shadow: var(--glow-lg);
+}
+
+.link-pic { height: 52px; width: auto; }
+
+.picture-size {
+  width: 100%;
+  max-width: 320px;
+  border-radius: var(--radius-sm);
+  border: 1px solid var(--pink-200);
+}
+
+/* ---------- 10. FOOTER ---------- */
+footer.resource-card {
+  max-width: 1080px;
+  margin: 1.75rem auto 0;
+  padding: 1.35rem 2.25rem;
+  text-align: center;
+}
+
+footer.resource-card p {
+  font-size: 0.85rem;
+  color: var(--ink-soft);
+  letter-spacing: 0.02em;
+}
+
+footer.resource-card::before { opacity: 1; }
+
+/* ---------- 11. ACCESSIBILITY ---------- */
+:focus-visible {
+  outline: 2px solid var(--pink-500);
+  outline-offset: 3px;
+  border-radius: 6px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *, *::before, *::after {
+    animation-duration: 0.01ms !important;
+    transition-duration: 0.01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
+/* ---------- 12. RESPONSIVE ---------- */
+@media (max-width: 860px) {
+  .bio {
+    flex-direction: column;
+    text-align: center;
+    gap: 1.5rem;
+  }
+  .resource-card h2::after { left: 50%; transform: translateX(-50%); }
+  .resource-card h2 { text-align: center; }
+  .resource-card li::before { left: 0; }
+}
+
+@media (max-width: 720px) {
+  .navbar {
+    flex-direction: column;
+    align-items: center;
+    gap: 0.75rem;
+    padding: 0.9rem 1rem;
+  }
+  .navbar-right {
+    justify-content: center;
+    gap: 0.15rem;
+  }
+  .navbar-right a {
+    padding: 0.45rem 0.7rem;
+    font-size: 0.82rem;
+  }
+  .home-card { padding: 1.75rem 1rem 0; }
+  .resource-card { padding: 1.5rem 1.25rem; }
+  .resource-card ul { grid-template-columns: 1fr; }
+  .bio-pic, .bio-pic img { width: 150px; height: 150px; }
+  .bio-pic { flex-basis: 150px; }
+}
