@@ -1,27 +1,227 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>My Starter Page</title>
-    <!-- Link your external CSS stylesheet here -->
-    <link rel="stylesheet" href="style.css">
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+  <!-- Update these (from Curator Guide) -->
+  <meta name="description" content=" Junior Fall Portfolio for Priyanshi Malik" />
+  <meta name="keywords" content= "portfolio, junior, projects, programming, web development" />
+  <meta name="author" content="Priyanshi Malik" />
+
+  <title>Priyanshi Malik | Junior Fall Portfolio</title>
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Optional favicon (put your icon file in the same folder) -->
+  <link rel="icon" type="image/x-icon" href="Hawaii_Hibiscus_Flower_Outline___Free_Png__Svg__Vector-removebg-preview.png" />
+
+  <!-- Optional fonts (only keep if your CSS uses them) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet" />
 </head>
+
 <body>
 
-    <header>
-        <h1>Welcome to My Website</h1>
-    </header>
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar">
+      <div class="navbar-left">
+        <!-- Replace logo.png with your own image file -->
+        <img src="Hawaii_Hibiscus_Flower_Outline___Free_Png__Svg__Vector-removebg-preview.png" alt=" Logo" />
+      </div>
 
-    <main>
-        <p>This is a standard HTML5 starter boilerplate. You can start editing this file to build your webpage.</p>
-    </main>
+      <ul class="navbar-right">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="cfus.html">CFUs</a></li>
+        <li><a href="labs.html">Labs</a></li>
+        <li><a href="contact.html">About Me</a></li>
+        <li><a href="infyapp.html">InfyApp</a></li>
+      </ul>
+    </nav>
+  </header>
 
-    <footer>
-        <p>&copy; Priyanshi_Malik Senior Portfolio </p>
-    </footer>
+  <!-- MAIN CONTENT -->
+  <main class="home-card">
 
-    <!-- Link your external JavaScript file here -->
-    <!--<script src="script.js"></script>-->
+    <!-- ABOUT / BIO CARD -->
+    <section class="resource-card">
+      <div class="bio">
+        <div class="bio-pic">
+          <!-- Replace profile.jpg with your own image file -->
+          <img src="EPPhotos-0060.jpg" alt=" My Photo" />
+        </div>
+
+        <div class="bio-text">
+          <h1>Priyanshi Malik</h1>
+          <h3>About Me</h3>
+          <p>Hi, my name is Priyanshi Malik, and I am a junior at Thomas A. Edison CTE High School in Queens, New York, enrolled in the Web and App Development program, where I have received my HTML and CSS Certification. I enjoy creating projects, learning new skills, and working with others. I am involved in Girls Who Code, Glamour Gals, Guitar Club, and am a member of HOSA–Future Health Professionals and the National Technical Honor Society. I also volunteer in my community and participate in school activities. Outside of class, I play volleyball and softball, which has helped me build teamwork and time-management skills. In the future, I plan to pursue a career in the medical field as a Pediatrician or Pediatric Ophthalmologist.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUICK LINKS CARD (optional) -->
+    <section class="resource-card">
+      <h2>Contact Info</h2>
+      <h4>This is my LinkedIn profile and my Email. </h4>
+
+      <div class="skill-images">
+        <!-- Email-->
+        <a href="mailto:priyanshim@nycstudents.net" target="_blank" rel="noopener">
+          <div class="picture">
+            <img class="link-pic" src="pinkgmail.png" alt="Email" />
+          </div>
+        </a>
+
+        <!--linked in-->
+        <a href="https://www.linkedin.com/in/priyanshi-malik-33b584397/" target="_blank" rel="noopener">
+          <div class="picture">
+            <img class="link-pic" src="business-icon-linkedin-icon-network-icon-social-icon-pink-text-line-circle-material-property-symbol-png-clipart-removebg-preview.png" alt="LinkedIn" />
+          </div>
+        </a>
+      </div>
+    </section> 
+
+  <section class="resource-card">
+  <h2>Resume/Certification₍ᐢ. .ᐢ₎</h2>
+  <h4>This is my Resume and Certification</h4>
+
+  <a href="Resume.pdf.pdf" target="_blank" rel="noopener">
+    <div class="picture">
+      <img class="picture-size"
+           src="Resume.pdf.pdf"
+           alt="Resume">
+    </div>
+  </a>
+
+  <a href="cert.pdf" target="_blank" rel="noopener">
+    <div class="picture">
+      <img class="picture-size"
+           src="cert.png"
+           alt="Certification HTML/CSS">
+    </div>
+  </a>
+</section>
+
+    <!-- PROJECTS SECTION (repeatable blocks) -->
+    <section class="resource-card">
+      <h2>Classes I Have Taken In Thomas A. Edison CTE High School</h2>
+      <h4>Freshamn Year (9th)(˶˃ ᵕ ˂˶)</h4>
+      <ul>
+        <li>Geometryᯓ★</li>
+        <li>Earth Scienceᯓ★</li>
+        <li>Global History 9ᯓ★</li>
+        <li>Musicᯓ★</li>
+        <li>Physical Educationᯓ★</li>
+        <li>Artᯓ★</li>
+        <li>Healthᯓ★</li>
+        <li>English 9ᯓ★</li>
+      </ul>
+      <h4>Sophomore Year (10th)(˶˃ ᵕ ˂˶)</h4>
+      <ul>
+        <li>Spanish 2ᯓ★</li>
+        <li>English 10ᯓ★</li>
+        <li>Algebra 2ᯓ★</li>
+        <li>Chemistryᯓ★</li>
+        <li>Global 10ᯓ★</li>
+        <li>Web & App Developmentᯓ★</li>
+      </ul>
+       <h4>Junior Year (11th)(˶˃ ᵕ ˂˶)</h4>
+      <ul>
+        <li>Yoga & Mindfullnessᯓ★</li>
+        <li>Pre-calc  SJUᯓ★</li>
+        <li>Web & App Developmentᯓ★</li>
+        <li>Goverment & Economicᯓ★</li>
+        <li>Ap Seminarᯓ★</li>
+        <li>Creative Writing (Honors)ᯓ★</li>
+      </ul>
+      <h4>Senior Year (12th)(˶˃ ᵕ ˂˶)</h4>
+      <h5>Coming Soon (2026-2027)</h5>
+    </section>
+
+     <section class="resource-card">
+     <h2>Clubs and Honor Societies(˶˃⤙˂˶)</h2>
+
+<h4>National Technical Honor Society (NTHS)✧˖°.</h4>
+<h5>Club Member | Dec 2025 – Present | Queens, NY</h5>
+<ul>
+  <li>Excellence in science education</li>
+  <li>Achievement, leadership, and technical skills</li>
+  <li>Opportunities for scholarships and professional growth</li>
+</ul>
+
+<h4>HOSA – Future Health Professionals✧˖°.</h4>
+<h5>Club Member | Sep 2025 – Present | Queens, NY</h5>
+<ul>
+  <li>Participates in fundraising and community volunteer events</li>
+  <li>Attends leadership conferences and competes in healthcare-related events</li>
+  <li>Develops professional skills and networks with healthcare professionals</li>
+</ul>
+
+       <h4>New York State National Science Honor Society✧˖°.</h4>
+<h5>Club Member | Dec 2025 – Present | Queens, NY</h5>
+<ul>
+  <li>Excellence in career and technical education</li>
+  <li>Achievement, leadership, and technical skills</li>
+  <li>Opportunities for scholarships and professional growth</li>
+  <li>Opportunities working in hosting and volunteering in school events</li>
+  <li>Taking part in the Science Olympiad NYS</li>
+</ul>
+
+<h2>Volunteering and Community Service𐙚⋆°🦢｡⋆♡</h2>
+
+<h4>GlamourGals Foundation, Inc.✧˖°.</h4>
+<h5>Club Member | Sep 2025 – Present | Queens, NY</h5>
+<ul>
+  <li>Volunteers at senior nursing homes</li>
+  <li>Assists with hair and nail care and engages in meaningful conversations</li>
+  <li>Builds communication, empathy, and interpersonal skills</li>
+</ul>
+
+<h2>Work Experience≽^• ˕ • ྀི≼</h2>
+
+<h4>Summer Youth Employment Program (SYEP)✧˖°.</h4>
+<h5>Summer Intern | Jul 2025 – Aug 2025 | Brooklyn, NY (Hybrid)</h5>
+<ul>
+  <li>Gained real-world work experience in a professional environment</li>
+  <li>Learned about workplace expectations, communication, and decision-making</li>
+  <li>College readiness lessons, including essay writing and personal development</li>
+</ul>
+
+<h4>IT & Media Intern (Industary Scholars Program)✧˖°.</h4>
+<h5>School year Intern | January 2026 – April 2026 | Flushing, NY (Hybrid)</h5>
+<ul>
+  <li>Gained real-world work experience in a professional environment (Architecture Firm)</li>
+  <li>Learned about workplace expectations, communication, and decision-making</li>
+</ul>
+       
+<h2>Leadership Experience◝(ᵔᗜᵔ)◜</h2>
+
+<h4>Girls Who Code✧˖°.</h4>
+<h5>Vice President | Sep 2024 – Jun 2025 | Queens, NY</h5>
+<ul>
+  <li>Served as Vice President, supporting the club president</li>
+  <li>Did presentations and helped organise club activities</li>
+  <li>Encouraged students to participate and engage in coding-related activities</li>
+</ul>
+
+    </section>
+
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="resource-card">
+    <p>© <span id="year"></span> Priyanshi Malik | Junior Fall Portfolio</p>
+  </footer>
+
+  <script>
+    // Auto-updates the year in the footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
 </body>
 </html>
