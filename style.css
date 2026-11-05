@@ -627,3 +627,57 @@ footer.resource-card::before {
   }
 }
 
+
+/* INFYAPP PAGE - LOGO AND DESCRIPTION */
+
+.bio {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 3rem;
+  width: 100%;
+}
+
+.bio-pic {
+  flex: 0 0 35%;
+}
+
+.bio-pic img {
+  width: 100%;
+  max-width: 350px;
+  height: auto;
+  border-radius: 15px;
+  display: block;
+}
+
+.bio-text {
+  flex: 1;
+  text-align: center;
+}
+
+.bio-text h1 {
+  margin-bottom: 1rem;
+}
+
+.bio-text p {
+  line-height: 1.8;
+}
+
+/* MOBILE RESPONSIVENESS */
+
+@media (max-width: 720px) {
+  .bio {
+    flex-direction: column;
+    gap: 1.5rem;
+  }
+
+  .bio-pic {
+    width: 100%;
+  }
+
+  .bio-pic img {
+    margin: 0 auto;
+  }
+}
+
+
