@@ -574,7 +574,7 @@ footer.resource-card::before { opacity: 1; }
     }
 
     .project iframe {
-        height: 300px;
+        height: 400px;
     }
 
     .reflection h3 {
