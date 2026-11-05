@@ -1,26 +1,28 @@
+
 /* ============================================================
    Priyanshi Malik | Portfolio Stylesheet
-   Theme: soft pink base + neon pink accents, card-based layout
+   Theme: soft pink base + neon pink accents
    ============================================================ */
 
 /* ---------- 1. DESIGN TOKENS ---------- */
+
 :root {
-  --pink-50:  #fff7fa;
+  --pink-50: #fff7fa;
   --pink-100: #ffeaf2;
   --pink-200: #ffd6e6;
   --pink-300: #ffb8d4;
   --pink-400: #ff8fbd;
-  --pink-500: #ff5fa2;   /* neon accent */
+  --pink-500: #ff5fa2;
   --pink-600: #e63e85;
   --pink-700: #b32a63;
 
-  --ink:      #2c1f28;   /* main text */
-  --ink-soft: #6b5563;   /* secondary text */
-  --white:    #ffffff;
+  --ink: #2c1f28;
+  --ink-soft: #6b5563;
+  --white: #ffffff;
 
-  --glow:     0 0 12px rgba(255, 95, 162, 0.45);
-  --glow-lg:  0 0 26px rgba(255, 95, 162, 0.35);
-  --shadow:   0 10px 30px rgba(180, 90, 130, 0.12);
+  --glow: 0 0 12px rgba(255, 95, 162, 0.45);
+  --glow-lg: 0 0 26px rgba(255, 95, 162, 0.35);
+  --shadow: 0 10px 30px rgba(180, 90, 130, 0.12);
   --shadow-h: 0 16px 40px rgba(180, 90, 130, 0.20);
 
   --radius: 18px;
@@ -29,9 +31,16 @@
 }
 
 /* ---------- 2. BASE ---------- */
-* { box-sizing: border-box; margin: 0; padding: 0; }
 
-html { scroll-behavior: smooth; }
+* {
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+html {
+  scroll-behavior: smooth;
+}
 
 body {
   font-family: 'Montserrat', -apple-system, BlinkMacSystemFont, 'Segoe UI', sans-serif;
@@ -47,11 +56,18 @@ body {
   padding-bottom: 3rem;
 }
 
-img { max-width: 100%; display: block; }
+img {
+  max-width: 100%;
+  display: block;
+}
 
-a { color: var(--pink-600); text-decoration: none; }
+a {
+  color: var(--pink-600);
+  text-decoration: none;
+}
 
 /* ---------- 3. NAVBAR ---------- */
+
 header {
   position: sticky;
   top: 0;
@@ -104,7 +120,6 @@ header {
   transition: color 0.3s var(--ease), background 0.3s var(--ease);
 }
 
-/* animated neon underline */
 .navbar-right a::after {
   content: "";
   position: absolute;
@@ -131,7 +146,8 @@ header {
   width: calc(100% - 1.9rem);
 }
 
-/* ---------- 4. LAYOUT ---------- */
+/* ---------- 4. GENERAL LAYOUT ---------- */
+
 .home-card {
   max-width: 1080px;
   margin: 0 auto;
@@ -142,6 +158,7 @@ header {
 }
 
 /* ---------- 5. CARD BOXES ---------- */
+
 .resource-card {
   position: relative;
   background: var(--white);
@@ -154,7 +171,6 @@ header {
               border-color 0.4s var(--ease);
 }
 
-/* neon top edge that lights up on hover */
 .resource-card::before {
   content: "";
   position: absolute;
@@ -172,9 +188,12 @@ header {
   box-shadow: var(--shadow-h);
 }
 
-.resource-card:hover::before { opacity: 1; }
+.resource-card:hover::before {
+  opacity: 1;
+}
 
 /* ---------- 6. HEADINGS ---------- */
+
 .resource-card h1 {
   font-size: clamp(1.9rem, 4vw, 2.6rem);
   font-weight: 700;
@@ -222,7 +241,9 @@ header {
   margin: 1.5rem 0 0.2rem;
 }
 
-.resource-card h4:first-of-type { margin-top: 0; }
+.resource-card h4:first-of-type {
+  margin-top: 0;
+}
 
 .resource-card h5 {
   font-size: 0.82rem;
@@ -233,6 +254,7 @@ header {
 }
 
 /* ---------- 7. BIO ---------- */
+
 .bio {
   display: flex;
   align-items: center;
@@ -256,7 +278,9 @@ header {
   transition: opacity 0.4s var(--ease);
 }
 
-.bio-pic:hover::after { opacity: 0.85; }
+.bio-pic:hover::after {
+  opacity: 0.85;
+}
 
 .bio-pic img {
   width: 190px;
@@ -267,7 +291,9 @@ header {
   box-shadow: 0 8px 26px rgba(180, 90, 130, 0.22);
 }
 
-.bio-text { flex: 1; }
+.bio-text {
+  flex: 1;
+}
 
 .bio-text p {
   color: var(--ink-soft);
@@ -275,6 +301,7 @@ header {
 }
 
 /* ---------- 8. LISTS ---------- */
+
 .resource-card ul {
   list-style: none;
   display: grid;
@@ -314,7 +341,8 @@ header {
   box-shadow: 0 0 14px rgba(255, 95, 162, 0.95);
 }
 
-/* ---------- 9. LINK IMAGES (email / LinkedIn) ---------- */
+/* ---------- 9. LINK IMAGES ---------- */
+
 .skill-images {
   display: flex;
   gap: 1.25rem;
@@ -341,7 +369,10 @@ header {
   box-shadow: var(--glow-lg);
 }
 
-.link-pic { height: 52px; width: auto; }
+.link-pic {
+  height: 52px;
+  width: auto;
+}
 
 .picture-size {
   width: 100%;
@@ -351,6 +382,7 @@ header {
 }
 
 /* ---------- 10. FOOTER ---------- */
+
 footer.resource-card {
   max-width: 1080px;
   margin: 1.75rem auto 0;
@@ -364,9 +396,12 @@ footer.resource-card p {
   letter-spacing: 0.02em;
 }
 
-footer.resource-card::before { opacity: 1; }
+footer.resource-card::before {
+  opacity: 1;
+}
 
 /* ---------- 11. ACCESSIBILITY ---------- */
+
 :focus-visible {
   outline: 2px solid var(--pink-500);
   outline-offset: 3px;
@@ -381,208 +416,214 @@ footer.resource-card::before { opacity: 1; }
   }
 }
 
-/* ---------- 12. RESPONSIVE ---------- */
-@media (max-width: 860px) {
-  .bio {
-    flex-direction: column;
-    text-align: center;
-    gap: 1.5rem;
-  }
-  .resource-card h2::after { left: 50%; transform: translateX(-50%); }
-  .resource-card h2 { text-align: center; }
-  .resource-card li::before { left: 0; }
+/* ============================================================
+   12. PROJECTS PAGE DESIGN
+   Larger interactive previews and centered descriptions
+   ============================================================ */
+
+/* ---------- PROJECT INTRODUCTION ---------- */
+
+.page_heading {
+  max-width: 1050px;
+  margin: 0 auto;
+  padding: 3.5rem 2rem 2.5rem;
+  text-align: center;
 }
 
+.page_heading h1 {
+  font-size: clamp(2.2rem, 5vw, 3.2rem);
+  font-weight: 700;
+  color: var(--ink);
+  letter-spacing: -0.03em;
+  margin-bottom: 1rem;
+}
+
+.page_heading h3 {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1rem;
+  line-height: 1.9;
+  font-weight: 400;
+  text-transform: none;
+  letter-spacing: 0.01em;
+  color: var(--ink-soft);
+}
+
+/* ---------- EXTRA LARGE PROJECT CARDS ---------- */
+
+.resource-card {
+  width: calc(100% - 2rem);
+  max-width: 1500px;
+  margin: 2rem auto;
+  padding: 2.5rem;
+}
+
+/* ---------- PROJECT LAYOUT ---------- */
+
+.project {
+  display: grid;
+  grid-template-columns: minmax(0, 1.6fr) minmax(280px, 0.7fr);
+  align-items: center;
+  gap: 2.5rem;
+  width: 100%;
+}
+
+/* ---------- EXTRA LARGE GAME PREVIEWS ---------- */
+
+.project iframe {
+  display: block;
+  width: 100%;
+  height: 680px;
+  border: 2px solid var(--pink-200);
+  border-radius: var(--radius);
+  background: var(--pink-50);
+  box-shadow: var(--shadow);
+  transition: border-color 0.3s ease, box-shadow 0.3s ease;
+}
+
+.project iframe:hover {
+  border-color: var(--pink-400);
+  box-shadow: var(--glow-lg);
+}
+
+/* ---------- PROJECT DESCRIPTIONS ---------- */
+
+.reflection {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  text-align: center;
+  padding: 1rem;
+}
+
+.reflection h3 {
+  font-size: 1.3rem;
+  font-weight: 700;
+  text-transform: none;
+  letter-spacing: 0.02em;
+  line-height: 1.5;
+  color: var(--pink-600);
+  margin-bottom: 1rem;
+}
+
+.reflection p {
+  font-size: 0.94rem;
+  line-height: 1.9;
+  color: var(--ink-soft);
+  margin-bottom: 1rem;
+  text-align: center;
+  max-width: 440px;
+}
+
+.reflection p strong {
+  color: var(--ink);
+  font-weight: 700;
+}
+
+/* ---------- PROJECT SKILLS ---------- */
+
+.reflection p:last-child {
+  font-size: 0.83rem;
+  line-height: 1.8;
+  color: var(--pink-700);
+  margin-top: 0.5rem;
+  padding: 0.8rem 1rem;
+  background: var(--pink-50);
+  border: 1px solid var(--pink-200);
+  border-radius: var(--radius-sm);
+}
+
+/* ---------- TABLET LAYOUT ---------- */
+
+@media (max-width: 900px) {
+
+  .project {
+    grid-template-columns: 1fr;
+    gap: 2rem;
+  }
+
+  .project iframe {
+    height: 600px;
+  }
+
+  .reflection {
+    padding: 1rem;
+  }
+
+  .reflection p {
+    max-width: 650px;
+  }
+}
+
+/* ---------- MOBILE LAYOUT ---------- */
+
 @media (max-width: 720px) {
+
   .navbar {
     flex-direction: column;
     align-items: center;
     gap: 0.75rem;
     padding: 0.9rem 1rem;
   }
+
   .navbar-right {
     justify-content: center;
     gap: 0.15rem;
   }
+
   .navbar-right a {
     padding: 0.45rem 0.7rem;
     font-size: 0.82rem;
   }
-  .home-card { padding: 1.75rem 1rem 0; }
-  .resource-card { padding: 1.5rem 1.25rem; }
-  .resource-card ul { grid-template-columns: 1fr; }
-  .bio-pic, .bio-pic img { width: 150px; height: 150px; }
-  .bio-pic { flex-basis: 150px; }
-}
 
+  .home-card {
+    padding: 1.75rem 1rem 0;
+  }
 
-/* ============================================================
-   13. PROJECTS PAGE DESIGN
-   Centered headings, larger previews, polished project cards
-   ============================================================ */
+  .resource-card {
+    width: calc(100% - 1rem);
+    padding: 1.25rem;
+  }
 
-/* ---------- PROJECT PAGE INTRODUCTION ---------- */
+  .resource-card ul {
+    grid-template-columns: 1fr;
+  }
 
-.page_heading {
-    max-width: 1050px;
-    margin: 0 auto;
-    padding: 3.5rem 2rem 2.5rem;
-    text-align: center;
-}
-
-.page_heading h1 {
-    font-size: clamp(2.2rem, 5vw, 3.2rem);
-    font-weight: 700;
-    color: var(--ink);
-    letter-spacing: -0.03em;
-    margin-bottom: 1rem;
-}
-
-.page_heading h3 {
-    max-width: 800px;
-    margin: 0 auto;
-    font-size: 1rem;
-    line-height: 1.9;
-    font-weight: 400;
-    text-transform: none;
-    letter-spacing: 0.01em;
-    color: var(--ink-soft);
-}
-
-/* ---------- PROJECT CARDS ---------- */
-
-.resource-card {
-    width: calc(100% - 3rem);
-    max-width: 1200px;
-    margin: 1.75rem auto;
-    padding: 2.25rem;
-}
-
-/* ---------- PROJECT LAYOUT ---------- */
-
-.project {
-    display: grid;
-    grid-template-columns: minmax(0, 1.2fr) minmax(280px, 0.8fr);
-    align-items: center;
-    gap: 2.5rem;
-}
-
-/* ---------- LARGER GAME PREVIEWS ---------- */
-
-.project iframe {
-    display: block;
-    width: 100%;
-    height: 480px;
-    border: 2px solid var(--pink-200);
-    border-radius: var(--radius);
-    background: var(--pink-50);
-    box-shadow: var(--shadow);
-    transition: border-color 0.3s ease, box-shadow 0.3s ease;
-}
-
-.project iframe:hover {
-    border-color: var(--pink-400);
-    box-shadow: var(--glow-lg);
-}
-
-/* ---------- PROJECT DESCRIPTIONS ---------- */
-
-.reflection {
-    display: flex;
+  .bio {
     flex-direction: column;
-    justify-content: center;
-    align-items: center;
     text-align: center;
-    padding: 1rem;
-}
+    gap: 1.5rem;
+  }
 
-.reflection h3 {
-    font-size: 1.3rem;
-    font-weight: 700;
-    text-transform: none;
-    letter-spacing: 0.02em;
-    line-height: 1.5;
-    color: var(--pink-600);
-    margin-bottom: 1rem;
-}
+  .bio-pic,
+  .bio-pic img {
+    width: 150px;
+    height: 150px;
+  }
 
-.reflection p {
-    font-size: 0.94rem;
-    line-height: 1.9;
-    color: var(--ink-soft);
-    margin-bottom: 1rem;
-    text-align: center;
-    max-width: 440px;
-}
+  .bio-pic {
+    flex-basis: 150px;
+  }
 
-.reflection p strong {
-    color: var(--ink);
-    font-weight: 700;
-}
+  .project iframe {
+    height: 420px;
+  }
 
-/* ---------- PROJECT SKILLS ---------- */
+  .reflection h3 {
+    font-size: 1.1rem;
+  }
 
-.reflection p:last-child {
-    font-size: 0.83rem;
-    line-height: 1.8;
-    color: var(--pink-700);
-    margin-top: 0.5rem;
-    padding: 0.8rem 1rem;
-    background: var(--pink-50);
-    border: 1px solid var(--pink-200);
-    border-radius: var(--radius-sm);
-}
+  .reflection p {
+    font-size: 0.88rem;
+  }
 
-/* ---------- RESPONSIVE PROJECT LAYOUT ---------- */
+  .page_heading {
+    padding: 2.5rem 1.25rem 1.5rem;
+  }
 
-@media (max-width: 900px) {
-
-    .project {
-        grid-template-columns: 1fr;
-        gap: 1.75rem;
-    }
-
-    .project iframe {
-        height: 430px;
-    }
-
-    .reflection {
-        padding: 0.5rem 1rem 1rem;
-    }
-
-    .reflection p {
-        max-width: 650px;
-    }
-}
-
-/* ---------- MOBILE DESIGN ---------- */
-
-@media (max-width: 600px) {
-
-    .page_heading {
-        padding: 2.5rem 1.25rem 1.5rem;
-    }
-
-    .page_heading h3 {
-        font-size: 0.9rem;
-    }
-
-    .resource-card {
-        width: calc(100% - 1.5rem);
-        padding: 1.25rem;
-        margin: 1.25rem auto;
-    }
-
-    .project iframe {
-        height: 400px;
-    }
-
-    .reflection h3 {
-        font-size: 1.1rem;
-    }
-
-    .reflection p {
-        font-size: 0.88rem;
-    }
+  .page_heading h3 {
+    font-size: 0.9rem;
+  }
 }
 
