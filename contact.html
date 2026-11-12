@@ -1,1 +1,102 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
 
+  <!-- Update these (from Curator Guide) -->
+  <meta name="description" content=" Junior Fall Portfolio for Priyanshi Malik" />
+  <meta name="keywords" content= "portfolio, junior, projects, programming, web development" />
+  <meta name="author" content="Priyanshi Malik" />
+
+  <title>Priyanshi Malik | Senior Fall Portfolio</title>
+
+  <!-- Main stylesheet -->
+  <link rel="stylesheet" href="style.css" />
+
+  <!-- Optional favicon (put your icon file in the same folder) -->
+  <link rel="icon" type="image/x-icon" href="priyanshimaliklogo.png" />
+
+  <!-- Optional fonts (only keep if your CSS uses them) -->
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@300;400;700&display=swap" rel="stylesheet" />
+</head>
+
+<body>
+
+  <!-- NAVBAR -->
+  <header>
+    <nav class="navbar">
+      <div class="navbar-left">
+        <!-- Replace logo.png with your own image file -->
+        <img src="priyanshimaliklogo.png" alt=" Logo" />
+      </div>
+
+      <ul class="navbar-right">
+        <li><a href="index.html">Home</a></li>
+        <li><a href="projects.html">Projects</a></li>
+        <li><a href="infyapp.html">InfyApp</a></li>
+        <li><a href="achievements.html">Achievements</a></li>
+        <li><a href="contact.html">Contact Me</a></li>
+      </ul>
+    </nav>
+  </header>
+
+  <!-- MAIN CONTENT -->
+  <main class="home-card">
+
+    <!-- ABOUT / BIO CARD -->
+    <section class="resource-card">
+      <div class="bio">
+        <div class="bio-pic">
+          <!-- Replace profile.jpg with your own image file -->
+          <img src="EPPhotos-0060.jpg" alt=" My Photo" />
+        </div>
+
+        <div class="bio-text">
+          <h1>Priyanshi Malik</h1>
+          <h3>About Me</h3>
+          <p>Hi, I'm Priyanshi Malik, a Senior at Thomas A. Edison Career and Technical Education High School in Queens, New York. I am enrolled in the Web and App Development program, certified in HTML and CSS, and I like building things that work well and look good. I serve as Vice President of Girls Who Code for 2026–2027 and am involved in Glamour Gals, Guitar Club, HOSA–Future Health Professionals, the National Technical Honor Society, and the New York Science Honor Society. I volunteer in my community and help run school events like open houses and showcases for our shop, and playing volleyball and softball has taught me teamwork and how to manage my time. I'm headed toward a career in STEM as a Biomedical Engineer.</p>
+        </div>
+      </div>
+    </section>
+
+    <!-- QUICK LINKS CARD (optional) -->
+    <section class="resource-card">
+      <h2>Contact Info</h2>
+      <h4>This is my LinkedIn profile and my Email. </h4>
+
+      <div class="skill-images">
+        <!-- Email-->
+        <a href="mailto:priyanshim@nycstudents.net" target="_blank" rel="noopener">
+          <div class="picture">
+            <img class="link-pic" src="pinkemaillogo.png" alt="Email" />
+          </div>
+        </a>
+
+        <!--linked in-->
+        <a href="https://www.linkedin.com/in/priyanshi-malik-33b584397/" target="_blank" rel="noopener">
+          <div class="picture">
+            <img class="link-pic" src="linkedinpink.png" alt="LinkedIn" />
+          </div>
+        </a>
+      </div>
+    </section> 
+
+
+
+  </main>
+
+  <!-- FOOTER -->
+  <footer class="resource-card">
+    <p>© <span id="year"></span> Priyanshi Malik | Senior Fall Portfolio</p>
+  </footer>
+
+  <script>
+    // Auto-updates the year in the footer
+    document.getElementById("year").textContent = new Date().getFullYear();
+  </script>
+
+</body>
+</html>
